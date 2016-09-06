@@ -1,16 +1,70 @@
 <html>
-<head>
-<title>Felt, Textile & Ceramic | Hand-Made Apparel, Home Decor & Accessories | Central Asia | centralasiaimports.com</title>
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="theme-color" content="#ffffff">
-</head>
-<body>
-<div><p><p/><p></p>
-<h2>Website under development...</h2>
-</div>
-</body>
+	<head>
+		<title>Felt, Silk & Ceramic | Hand-Made Apparel, Carpets, Home Decor & Accessories | Central Asia | centralasiaimports.com</title>
+		<link rel="stylesheet" type="text/css" href="style/style.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Fjalla+One|Nunito" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="theme-color" content="#ffffff">
+		<script type="text/javascript">
+			var path = "img\\SlideImages\\";
+			var deck = new Array();
+			deck[0] = new Image();
+			deck[0].src = path + 'lion.jpg'; 
+			deck[1] = new Image();
+			deck[1].src = path + 'puppy.jpg';
+			deck[2] = new Image();
+			deck[2].src	= path + 'zebras.jpg';
+			deck[3] = new Image();
+			deck[3].src	= path + 'fox.jpg';	
+		</script>
+	</head>
+	<body>
+		<div id="container-body">
+			<div id="links">
+				<span>
+					<img src="DevelopmentResources/logoImages/facebook.jpg" alt="Facebook" hspace="10">
+					<img src="DevelopmentResources/logoImages/pinterest.png" alt="Pinterest" hspace="10">
+					<img src="DevelopmentResources/logoImages/twitter.jpg" alt="Twitter" hspace="10">
+				</span>
+			</div>
+			<div id="logo">
+				<a id="logoLink" href="http://www.centralasiaimports.com"><img src="DevelopmentResources/logoImages/logoPlaceholder.png" alt="Central Asia Imports"/></a>
+				<ul class="mainNav">
+					<li><a href="http://www.centralasiaimports.com">HOME<a/></li>
+					<li><a href="http://www.nytimes.com">GALLERY<a/></li>
+					<li><a href="http://www.nytimes.com">ABOUT US<a/></li>
+					<li><a href="http://www.nytimes.com">CONTACT<a/></li>
+				</ul>
+			</div>
+			<div id="image">
+				<img src="img\SlideImages\fox.jpg" id="slide" width="100" height="56" />
+				<script type="text/javascript">
+					var step = 0;
+					function feedSlide(){
+					console.log('running the function....');
+						if(!document.images){
+							return;
+						}
+						document.getElementById('slide').src = deck[step].src;
+						if(step === 3){
+							step = 0;
+						}else{
+							step++;
+						}
+						setTimeout("feedSlide()",3000)
+					}
+					feedSlide();
+				</script>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<div id="container-footer">
+			<span>Copyright 2016 | Contact: <a href="mailto:tatiana@centralasiaimports.com">tatiana@centralasiaimports.com</a></span>
+		</div>
+	</footer>
 </html>
